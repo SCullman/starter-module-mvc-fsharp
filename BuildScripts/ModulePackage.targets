@@ -55,11 +55,11 @@
 
     <!-- Get resource files -->
     <ItemGroup>
-      <Module-Resources Include="**/*.resx" />
-      <Module-Controls Include="**/*.cshtml" />
-      <Module-Styles Include="*.css" />
-      <Module-Scripts Include="**/*.js" />
-      <Resources Include="@(Module-Resources);@(Module-Controls);@(Module-Styles);@(Module-Scripts)" Exclude="@DefaultExclude"  />
+      <Module-Resources Include="**/*.resx" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;"/>
+      <Module-Controls Include="**/*.cshtml" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <Module-Styles Include="*.css" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;"/>
+      <Module-Scripts Include="**/*.js" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;"/>
+      <Resources Include="@(Module-Resources);@(Module-Controls);@(Module-Styles);@(Module-Scripts)"   />
     </ItemGroup>
 
     <!-- Copy the resource files -->
@@ -89,9 +89,9 @@
     <!-- Copy the install files -->
     <Message Text="Copying Install files" Importance="high" />
     <ItemGroup>
-      <InstallFiles Include="**\*.dnn" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;" />
-      <InstallFiles Include="**\*.txt" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;" />
-      <InstallFiles Include="**\*.SqlDataProvider" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;" />
+      <InstallFiles Include="**\*.dnn" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <InstallFiles Include="**\*.txt" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <InstallFiles Include="**\*.SqlDataProvider" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
     </ItemGroup>
     <Copy SourceFiles="@(InstallFiles)" DestinationFolder="$(DeployFolder)\%(RecursiveDir)" />
 
@@ -174,9 +174,9 @@
     <!-- Copy the install files -->
     <Message Text="Copying Install files" Importance="high" />
     <ItemGroup>
-      <InstallFiles Include="**\*.dnn" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <InstallFiles Include="**\*.txt" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <InstallFiles Include="**\*.SqlDataProvider" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
+      <InstallFiles Include="**\*.dnn" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;;" />
+      <InstallFiles Include="**\*.txt" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;;" />
+      <InstallFiles Include="**\*.SqlDataProvider" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
     </ItemGroup>
     <Copy SourceFiles="@(InstallFiles)" DestinationFolder="$(PackageInstallFolder)\%(RecursiveDir)" />
 
