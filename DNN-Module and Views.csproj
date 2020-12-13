@@ -166,7 +166,7 @@
     <Content Include=".gitignore" />
     <Content Include="README.md" />
     <None Include="SqlDataProviderFiles\00.00.01.SqlDataProvider" />
-    <None Include="starter-module-mvc.dnn" />
+    <None Include="starter-module-mvc-fsharp.dnn" />
     <None Include="SqlDataProviderFiles\Uninstall.SqlDataProvider" />
     <None Include="ReleaseNotes.txt" />
     <None Include="License.txt" />

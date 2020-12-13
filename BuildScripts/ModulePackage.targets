@@ -24,6 +24,7 @@
       <DefaultExclude Include="**\.svn\**" />
       <DefaultExclude Include="**\bin\**" />
       <DefaultExclude Include="**\obj\**" />
+      <DefaultExclude Include="**\dnn\**" />
       <DefaultExclude Include="**\Release\**" />
       <DefaultExclude Include="**\Debug\**" />
       <DefaultExclude Include="**\Test\**" />
@@ -58,7 +59,7 @@
       <Module-Controls Include="**/*.cshtml" />
       <Module-Styles Include="*.css" />
       <Module-Scripts Include="**/*.js" />
-      <Resources Include="@(Module-Resources);@(Module-Controls);@(Module-Styles);@(Module-Scripts)" />
+      <Resources Include="@(Module-Resources);@(Module-Controls);@(Module-Styles);@(Module-Scripts)" Exclude="@DefaultExclude"  />
     </ItemGroup>
 
     <!-- Copy the resource files -->
@@ -119,16 +120,17 @@
 
     <!-- Get the resource files -->
     <ItemGroup>
-      <ResourceFiles Include="**\*.cshtml" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.js" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.css" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.gif" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.jpg" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.jpeg" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.png" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.svg" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.resx" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
-      <ResourceFiles Include="**\*.resources" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;Website\**;" />
+      <ResourceFiles Include="**\*.cshtml" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.js" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.css" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.gif" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.jpg" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.jpeg" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.png" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.svg" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.resx" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      <ResourceFiles Include="**\*.resources" Exclude="packages\**;**\obj\**;**\_ReSharper*\**;**\Website\**;" />
+      
     </ItemGroup>
 
     <!-- Copy the resource files -->
@@ -139,7 +141,6 @@
     <ItemGroup>
       <!-- Hint: $(ProjectName).dll is created by Module And Controllers -->
       <SymbolsFiles Include="bin\$(ProjectName).pdb" />
-      <SymbolsFiles Include="bin\ModelAndController.pdb" />
     </ItemGroup>
 
     <!-- Copy the symbols-->
