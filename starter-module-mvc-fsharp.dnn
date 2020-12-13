@@ -18,7 +18,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules/MVC/starter-module-mvc</basePath>
+            <basePath>DesktopModules/MVC/starter-module-mvc-fsharp</basePath>
             <script type="Install">
               <path>SqlDataProviderFiles</path>
               <name>00.00.01.SqlDataProvider</name>
