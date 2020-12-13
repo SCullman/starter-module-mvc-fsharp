@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>starter-module-mvc-fsharp</AssemblyName>
+    <Version>1.0.0</Version> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Model and Services.fs" />
+    <Compile Include="Controllers.fs" />
+    <Compile Include="Configuration and Startup.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetNuke.Web.Mvc" Version="9.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+</Project>

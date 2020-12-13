@@ -7,9 +7,9 @@
 
     <!-- Reusable variables -->
     <PropertyGroup>
-      <ProjectName>starter-module-mvc</ProjectName>
-      <WebsiteFolder>..\Instances\dnn961\Website</WebsiteFolder>
-      <DeployFolder>$(WebsiteFolder)\DesktopModules\MVC\starter-module-mvc</DeployFolder>
+      <ProjectName>starter-module-mvc-fsharp</ProjectName>
+      <WebsiteFolder>dnn\Website</WebsiteFolder>
+      <DeployFolder>$(WebsiteFolder)\DesktopModules\MVC\starter-module-mvc-fsharp</DeployFolder>
       <PackageFolder>Package</PackageFolder>
       <PackageResourcesFolder>$(PackageFolder)\Resources</PackageResourcesFolder>
       <PackageInstallFolder>$(PackageFolder)\Install</PackageInstallFolder>
@@ -20,7 +20,6 @@
   </Target>
 
   <Target Name="SetDefaultExclude">
-
     <ItemGroup>
       <DefaultExclude Include="**\.svn\**" />
       <DefaultExclude Include="**\bin\**" />
@@ -37,7 +36,6 @@
       <DefaultExclude Include="**\*.txt" />
       <DefaultExclude Include="**\*ReSharper.*\**" />
     </ItemGroup>
-
   </Target>
 
   <Target Name="DeployModule" Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' " DependsOnTargets="SetVariables;SetDefaultExclude" >
@@ -78,7 +76,9 @@
 
     <!-- Get the binaries -->
     <ItemGroup>
+      <!-- Hint: $(ProjectName).dll is created by Module And Controllers -->
       <BinFiles Include="bin\$(ProjectName).dll" />
+      <BinFiles Include="bin\FSharp.Core.dll" />
     </ItemGroup>
 
     <!-- Copy the binaries -->
@@ -137,7 +137,9 @@
 
     <!-- Get the symbols -->
     <ItemGroup>
+      <!-- Hint: $(ProjectName).dll is created by Module And Controllers -->
       <SymbolsFiles Include="bin\$(ProjectName).pdb" />
+      <SymbolsFiles Include="bin\ModelAndController.pdb" />
     </ItemGroup>
 
     <!-- Copy the symbols-->
@@ -147,6 +149,7 @@
     <!-- Get the binaries -->
     <ItemGroup>
       <BinFiles Include="bin\$(ProjectName).dll" />
+      <BinFiles Include="bin\FSharp.Core.dll" />
     </ItemGroup>
 
     <!-- Copy the binaries -->

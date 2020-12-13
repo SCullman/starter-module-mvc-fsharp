@@ -1,7 +1,7 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="starter-module-mvc" type="Module" version="00.00.01">
-      <friendlyName>starter-module-mvc</friendlyName>
+    <package name="starter-module-mvc-fsharp" type="Module" version="00.00.01">
+      <friendlyName>starter-module-mvc-fsharp</friendlyName>
       <description>A starter MVC module project by and for the DNN Comnmunity</description>
       <iconFile />
       <owner>
@@ -34,7 +34,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules/MVC/starter-module-mvc</basePath>
+            <basePath>DesktopModules/MVC/starter-module-mvc-fsharp</basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
@@ -43,13 +43,13 @@
 
         <component type="Module">
           <desktopModule>
-            <moduleName>starter-module-mvc</moduleName>
-            <foldername>starter-module-mvc</foldername>
+            <moduleName>starter-module-mvc-fsharp</moduleName>
+            <foldername>starter-module-mvc-fsharp</foldername>
             <businessControllerClass/>
             <supportedFeatures />
             <moduleDefinitions>
               <moduleDefinition>
-                <friendlyName>starter-module-mvc</friendlyName>
+                <friendlyName>starter-module-mvc-fsharp</friendlyName>
                 <defaultCacheTime>0</defaultCacheTime>
                 <moduleControls>
                   <moduleControl>
@@ -80,7 +80,10 @@
           <assemblies>
             <basePath>bin</basePath>
             <assembly>
-              <name>starter-module-mvc.dll</name>
+              <name>starter-module-mvc-fsharp.dll</name>
+            </assembly>
+            <assembly>
+              <name>fsharp.core.dll</name>
             </assembly>
           </assemblies>
         </component>

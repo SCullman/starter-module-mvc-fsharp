@@ -1,61 +1,37 @@
-﻿# starter-module-mvc
+﻿# starter-module-mvc-fsharp - MVC F# 
 
-[![License: MIT](https://img.shields.io/badge/LICENSE-MIT-informational.svg)](https://opensource.org/licenses/MIT)
+**starter-module-mvc-fsharp** is a MVC module starter project for [DNN Platform](https://github.com/dnnsoftware/Dnn.Platform) (formerly known as DotNetNuke) made by and for the [DNN Community](https://dnncommunity.org). 
 
-**starter-module-mvc** is a MVC module starter project for [DNN Platform](https://github.com/dnnsoftware/Dnn.Platform) (formerly known as DotNetNuke) made by and for the [DNN Community](https://dnncommunity.org).
+It is ported from [C#](https://github.com/DNNCommunity/starter-module-mvc) to F#.
 
 ## Installation
 
-### Installation Option #1
+### Installation
 
 Clone this repo into a clean directory of your choice.
 
 ```bash
-git clone https://github.com/DNNCommunity/starter-module-mvc.git .
+git clone https://github.com/SCullman/starter-module-mvc-fsharp.git 
 ```
 
-### Installation Option #2
 
-Use **dnn-cli**, which is [available as an npm package](https://www.npmjs.com/package/@dnncommunity/dnn-cli).  **dnn-cli** can be installed via **yarn** or **npm**.
-
----
-#### Install dnn-cli...
-
-...via **yarn**:
-
-```bash
-yarn global add @dnncommunity/dnn-cli
-```
-
-...via **npm**:
-
-```bash
-npm install -g @dnncommunity/dnn-cli
-```
----
-
-Once **dnn-cli** is installed, this starter project can be installed into an empty directory of your choice.
-
-```bash
-cd <directory path>
-dnn module mvc
-```
 
 ## Usage
 
-1. Install DNN in a `.\Website` folder (root of directory in which this project is cloned)
+1. Install DNN in a `.dnn\website` folder (root of directory in which this project is cloned).  
+Hint:  (Install DNN to the folder `.\dnn` with [NVQuickSIte](https://github.com/nvisionative/nvQuickSite) )
 2. Open solution file in Visual Studio 2019 (Run as Adminstrator...)
 3. Build in `Debug` or `Release` mode
 
 ### Debug
 
-By default this will compile the project and deploy it to the `.\Website` folder.  
-- DLL and PDB files will be deployed to `.\Website\bin`
-- All other relevant files will be deployed to `.\Website\DesktopModules\starter-module-mvc`
+By default this will compile the project and deploy it to the `.\dnn\Website` folder.  
+- DLL and PDB files will be deployed to `.\dnn\Website\bin`
+- All other relevant files will be deployed to `.\dnn\Website\DesktopModules\starter-module-mvc-fsharp`
 
 ### Release
 
-By default this will create a module install package and place in `.\Website\Install\Module` so it will be in **Available Extensions** within DNN (SETTINGS > Extensions > Available Extensions).
+By default this will create a module install package and place in `.\dnn\Website\Install\Module` so it will be in **Available Extensions** within DNN (SETTINGS > Extensions > Available Extensions).
 
 ## Contributing
 Pull requests are welcome. Please open an issue first to document the bug or enhancement details.
